@@ -1,7 +1,14 @@
 <?php
 session_start();
 $id = $_GET["id"] ?? "";
+
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.php");
+    exit();
+}
+echo "ยินดีต้อนรับ " . $_SESSION["username"];
 ?>
+
 <!doctype html>
 <html lang="en">
   <!--begin::Head-->
@@ -419,7 +426,7 @@ $id = $_GET["id"] ?? "";
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="?id=student&level=1" class="nav-link">
+                    <a href="?id=users" class="nav-link">
                       <i class="nav-icon bi bi-people"></i>
                       <p>ผู้ใช้งานทั้งหมด</p>
                     </a>
@@ -481,6 +488,8 @@ $id = $_GET["id"] ?? "";
                     include "news_detail.php";
                   }elseif($id=="regis_user"){
                     include "regis_user.php";
+                  }elseif($id=="users"){
+                    include "users.php";
                   }
                   
                   else{
