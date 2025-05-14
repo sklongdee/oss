@@ -403,6 +403,29 @@ $id = $_GET["id"] ?? "";
                   </li>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-person"></i>
+                  <p>
+                    จัดการผู้ใช้งานระบบ
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="?id=regis_user" class="nav-link">
+                      <i class="nav-icon bi bi-person-add"></i>
+                      <p>เพิ่มผู้ใช้งาน</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="?id=student&level=1" class="nav-link">
+                      <i class="nav-icon bi bi-people"></i>
+                      <p>ผู้ใช้งานทั้งหมด</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
               
             </ul>
             <!--end::Sidebar Menu-->
@@ -456,6 +479,8 @@ $id = $_GET["id"] ?? "";
                     include "update_news.php";
                   }elseif($id=="news_detail"){
                     include "news_detail.php";
+                  }elseif($id=="regis_user"){
+                    include "regis_user.php";
                   }
                   
                   else{

@@ -49,7 +49,7 @@
             </ul>
           </li>
         </ul>
-          <a href="admin" class="btn btn-outline-success">Login</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#LoginModal" class="btn btn-outline-success">Login</a>
       </div>
     </div>
   </nav>
@@ -122,3 +122,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">ลงชื่อเข้าใช้</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">ชื่อผู้ใช้</label>
+            <input type="text" class="form-control" id="username" aria-describedby="username">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">รหัสผ่าน</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+        <button type="submit" class="btn btn-primary">ลงชื่อเข้าใช้</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
