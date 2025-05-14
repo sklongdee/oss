@@ -46,5 +46,6 @@ unset($_SESSION["alert_update"]);
     <input class="form-control" type="file" id="news_img" name="news_img">
   </div>
   <input hidden type="text" name="news_id" value="<?=$news_id?>">
+  <input hidden type="text" name="old_news_img" value="<?=$news_img?>">
   <button type="submit" class="btn btn-primary">แก้ไขข่าว</button>
 </form>
