@@ -3,10 +3,9 @@ session_start();
 $id = $_GET["id"] ?? "";
 
 if (!isset($_SESSION["user_id"])) {
-    header("Location: login.php");
+    header("Location: ../");
     exit();
 }
-echo "ยินดีต้อนรับ " . $_SESSION["username"];
 ?>
 
 <!doctype html>
@@ -232,7 +231,7 @@ echo "ยินดีต้อนรับ " . $_SESSION["username"];
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
-                <span class="d-none d-md-inline">Alexander Pierce</span>
+                <span class="d-none d-md-inline"><?=$_SESSION["_name"]?></span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
@@ -262,7 +261,7 @@ echo "ยินดีต้อนรับ " . $_SESSION["username"];
                 <!--begin::Menu Footer-->
                 <li class="user-footer">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                  <a href="../logout.php" class="btn btn-default btn-flat float-end">ออกจากระบบ</a>
                 </li>
                 <!--end::Menu Footer-->
               </ul>
